@@ -33,7 +33,7 @@
                                 <div class="post-data">
                                     <a href="categories.php?categories=<?php echo $singleNews['news_categories_id'] ?>" class="post-catagory"><?php $newscategory = NewsCategories::get_news_categories_title_by_id($conn,$singleNews['news_categories_id']);echo $newscategory;?></a>
                                     <a href="single-post.php?post=<?php echo $singleNews['id']; ?>" class="post-title">
-                                        <h6 style="width: 30px;"><?php echo $singleNews['title'];  ?></h6>
+                                        <h6><?php echo $singleNews['title'];  ?></h6>
                                     </a>
                                     <div class="post-meta">
                                         <p class="post-author">By <a href="#">
@@ -84,7 +84,7 @@
                                             <div class="post-meta">
                                                 <a href="single-post.php?post=<?php echo $queryrow['id']; ?>"
                                                    class="post-title">
-                                                    <h6><?php echo $singleNews['title']; ?></h6>
+                                                    <h6><?php echo $queryrow['title']; ?></h6>
                                                 </a>
                                             </div>
                                         </div>
