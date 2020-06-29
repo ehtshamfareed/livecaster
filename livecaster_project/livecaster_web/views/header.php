@@ -87,25 +87,7 @@ include './req/setting.php';
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li class="active"><a href="../index.php">Home</a></li>
-                                <!--<li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="catagories-post.html">Catagories</a></li>
-                                        <li><a href="single-post.html">Single Articles</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="#">Dropdown</a>
-                                            <ul class="dropdown">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagories-post.html">Catagories</a></li>
-                                                <li><a href="single-post.html">Single Articles</a></li>
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>-->
+                                <li><a href="../index.php">Home</a></li>
                                 <?php
                                 $result = NewsCategories::get_news_categories_title($conn);
                                 while ($row = $result->fetch_assoc()) {
