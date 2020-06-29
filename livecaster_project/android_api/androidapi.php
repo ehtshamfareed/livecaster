@@ -61,11 +61,10 @@ if(isset($_GET['checkUser'])){
 if(isset($_GET['postingHeadline'])){
 
     $postingHeadline = $_GET['postingHeadline'];
-    $authorize_users_id = $_GET['authorize_users_id'];
     $validation_status = "yes";
-    $stmt = $conn->prepare("INSERT INTO headline (title, validation_status, authorize_users_id ) VALUES (?,?,?)");
+    $stmt = $conn->prepare("INSERT INTO headline (title, validation_status ) VALUES (?,?)");
     $null = NULL;
-    $stmt->bind_param("sss", $postingHeadline,$validation_status,$authorize_users_id );
+    $stmt->bind_param("ss", $postingHeadline,$validation_status );
     $stmt->execute();
     $output['output'][] = array("Status"=> "Posted Successfully!");
 
